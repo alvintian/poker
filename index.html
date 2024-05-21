@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Poker Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Simple Poker Game</h1>
+    <div id="game">
+        <div id="player1">
+            <h2>Player 1 (You) - $<span id="player1-money">1000</h2>
+            <div id="player1-hand" class="hand"></div>
+        </div>
+        <div id="player2">
+            <h2>Player 2 (CPU) - $<span id="player2-money">1000</h2>
+            <div id="player2-hand" class="hand"></div>
+        </div>
+        <div id="community">
+            <h2>Community Cards</h2>
+            <div id="community-cards" class="hand"></div>
+        </div>
+        <div id="pot">Pot: $0</div>
+        <div id="buttons">
+            <button id="deal-button">Deal</button>
+            <button id="check-button" style="display:none;">Check</button>
+            <button id="fold-button" style="display:none;">Fold</button>
+            <button id="raise-button" style="display:none;">Raise</button>
+            <div id="raise-options" style="display:none;">
+                <input type="number" id="raise-amount" min="10" max="1000" step="10" value="50">
+                <button id="confirm-raise-button">Confirm</button>
+                <button id="cancel-raise-button">Cancel</button>
+            </div>
+        </div>
+        <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

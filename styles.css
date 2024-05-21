@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2e2e2e;
+    color: white;
+    margin: 0;
+    flex-direction: column;
+}
+
+#game {
+    text-align: center;
+}
+
+.hand {
+    margin: 20px;
+}
+
+#buttons {
+    margin: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.card {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #fff;
+    display: inline-block;
+}
+.card img {
+    width: 100px; 
+    height: auto;
+    display: block;
+    margin: auto;
+}
