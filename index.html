@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heads-Up Poker (GitHub Pages)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Heads-Up Texas Hold’em</h1>
+      <div class="sub">Static front-end demo (GitHub Pages)</div>
+    </div>
+    <div class="bank">
+      <div class="chipline"><span class="label">You</span><span id="pChips" class="value"></span></div>
+      <div class="chipline"><span class="label">CPU</span><span id="cChips" class="value"></span></div>
+      <div class="chipline pot"><span class="label">Pot</span><span id="pot" class="value"></span></div>
+      <div class="chipline"><span class="label">Street</span><span id="street" class="value"></span></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="table">
+      <div class="row">
+        <div class="seat">
+          <div class="seatTitle">CPU</div>
+          <div class="cards" id="cpuCards"></div>
+          <div class="betline">Bet: <span id="cpuBet">0</span></div>
+        </div>
+
+        <div class="center">
+          <div class="centerTitle">Community</div>
+          <div class="cards community" id="community"></div>
+          <div class="hint" id="hint"></div>
+        </div>
+
+        <div class="seat">
+          <div class="seatTitle">You</div>
+          <div class="cards" id="playerCards"></div>
+          <div class="betline">Bet: <span id="playerBet">0</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="status" id="status">Click “New Hand” to start.</div>
+
+      <div class="controls">
+        <button id="newHandBtn" class="btn primary">New Hand</button>
+        <button id="checkCallBtn" class="btn">Check</button>
+        <button id="raiseBtn" class="btn">Raise</button>
+        <button id="foldBtn" class="btn danger">Fold</button>
+      </div>
+
+      <div id="raiseBox" class="raiseBox hidden">
+        <div class="raiseRow">
+          <div class="raiseLabel">Raise amount</div>
+          <div class="raiseValue">$<span id="raiseAmt">50</span></div>
+        </div>
+        <input id="raiseSlider" type="range" min="10" max="200" step="10" value="50" />
+        <div class="raiseActions">
+          <button id="confirmRaiseBtn" class="btn primary">Confirm Raise</button>
+          <button id="cancelRaiseBtn" class="btn">Cancel</button>
+        </div>
+        <div class="smallNote" id="raiseNote"></div>
+      </div>
+
+      <div class="results" id="results"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    Built for GitHub Pages • No server required
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
